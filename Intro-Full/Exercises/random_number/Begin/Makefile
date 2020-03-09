@@ -1,4 +1,4 @@
-KOKKOS_PATH = ${HOME}/Kokkos/kokkos
+KOKKOS_PATH ?= ${HOME}/Kokkos/kokkos
 SRC = $(wildcard *.cpp)
 
 #KOKKOS_DEVICES = "Cuda,OpenMP"

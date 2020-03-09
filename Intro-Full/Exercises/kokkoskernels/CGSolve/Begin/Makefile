@@ -1,4 +1,4 @@
-KOKKOS_PATH = ${HOME}/Kokkos/kokkos
+KOKKOS_PATH ?= ${HOME}/Kokkos/kokkos
 KOKKOSKERNELS_PATH = ${HOME}/Kokkos/kokkos-kernels
 KOKKOS_DEVICES = "Cuda,OpenMP"
 EXE_NAME = "cgsolve"
