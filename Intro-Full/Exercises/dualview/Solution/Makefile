@@ -13,12 +13,12 @@ default: build
 ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
 CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
 EXE = ${EXE_NAME}.cuda
-KOKKOS_ARCH = "BDW,Pascal60"
+KOKKOS_ARCH = "SKX,Pascal60"
 KOKKOS_CUDA_OPTIONS = "enable_lambda"
 else
 CXX = g++
 EXE = ${EXE_NAME}.host
-KOKKOS_ARCH = "BDW"
+KOKKOS_ARCH = "SKX"
 endif
 
 #CXXFLAGS = -O3 -DKOKKOS_ENABLE_DEBUG_BOUNDS_CHECK 

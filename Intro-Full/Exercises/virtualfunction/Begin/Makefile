@@ -17,7 +17,7 @@ override LINKFLAGS += --remove-duplicate-link-files
 else
 CXX = g++
 EXE = ${EXE_NAME}.host
-KOKKOS_ARCH = "BDW"
+KOKKOS_ARCH = "SKX"
 endif
 
 override CXXFLAGS += -I./
