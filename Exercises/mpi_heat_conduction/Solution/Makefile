@@ -13,7 +13,18 @@ default: build
 CXX = mpicxx
 EXE = mpi_heat_conduction.exe
 
-CXXFLAGS = -O3 -g
+ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
+CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
+EXE = ${EXE_NAME}.cuda
+KOKKOS_ARCH = "BDW,Pascal60"
+KOKKOS_CUDA_OPTIONS = "enable_lambda"
+else
+CXX = g++
+EXE = ${EXE_NAME}.host
+KOKKOS_ARCH = "BDW"
+endif
+
+CXXFLAGS = -O3
 LINK = ${CXX}
 LINKFLAGS =
 
