@@ -4,7 +4,7 @@ $HOME/Kokkos/kokkos/generate_makefile.bash \
 --with-cuda \
 --with-serial \
 --compiler=$HOME/Kokkos/kokkos/bin/nvcc_wrapper \
---arch="BDW,Volta70" \
+--arch="BDW,Pascal60" \
 --with-options="disable_deprecated_code" \
 --with-cuda-options="enable_lambda" \
 --cxxflags="-O3 -g"
