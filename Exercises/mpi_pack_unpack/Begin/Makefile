@@ -1,4 +1,4 @@
-KOKKOS_PATH = ${HOME}/Projects/kokkos
+KOKKOS_PATH ?= ${HOME}/kokkos
 KOKKOS_DEVICES = "Cuda,OpenMP"
 EXE_NAME = "MPIPackUnpack"
 
