@@ -6,7 +6,7 @@ KOKKOS_ARCH = "HSW"
 MAKEFILE_PATH := $(subst Makefile,,$(abspath $(lastword $(MAKEFILE_LIST))))
 
 ifndef KOKKOS_PATH
-  KOKKOS_PATH = ${HOME}/Kokkos/kokkos
+  KOKKOS_PATH ?= ${HOME}/Kokkos/kokkos
 endif
 
 SRC = $(wildcard $(MAKEFILE_PATH)*.cpp)

@@ -1,4 +1,7 @@
-KOKKOS_PATH = ${HOME}/Kokkos/kokkos
+KOKKOS_PATH ?= ${HOME}/Kokkos/kokkos
+KOKKOS_DEVICES = "OpenMP"
+EXE_NAME = "03_Exercise"
+
 SRC = $(wildcard *.cpp)
 KOKKOS_DEVICES=Cuda,OpenMP
 KOKKOS_CUDA_OPTIONS=enable_lambda
