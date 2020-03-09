@@ -9,7 +9,9 @@ default: build
 
 ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
 CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
-EXE = mpi_heat_conduction.cuda
+EXE = ${EXE_NAME}.cuda
+KOKKOS_ARCH = "Pascal60"
+KOKKOS_CUDA_OPTIONS = "enable_lambda"
 else
 CXX = g++
 EXE = mpi_heat_conduction.host
