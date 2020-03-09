@@ -1,4 +1,4 @@
-KOKKOS_PATH = ${HOME}/kokkos
+KOKKOS_PATH ?= ${HOME}/kokkos
 KOKKOS_DEVICES = "Cuda"
 EXE_NAME = "median-finding"
 
