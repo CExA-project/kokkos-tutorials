@@ -11,11 +11,11 @@ CXX = mpicxx
 
 ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
 EXE = ${EXE_NAME}.cuda
-KOKKOS_ARCH = "BDW,Pascal60"
+KOKKOS_ARCH = "SKX,Pascal60"
 KOKKOS_CUDA_OPTIONS = "enable_lambda"
 else
 EXE = ${EXE_NAME}.host
-KOKKOS_ARCH = "BDW"
+KOKKOS_ARCH = "SKX"
 endif
 
 CXXFLAGS = -O3

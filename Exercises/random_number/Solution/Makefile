@@ -12,14 +12,14 @@ CXXFLAGS = -O3
 LINK = ${CXX}
 LDFLAGS = 
 EXE = MC_DartSampler.cuda
-KOKKOS_ARCH = "BDW,Pascal60"
+KOKKOS_ARCH = "SKX,Pascal60"
 else
 CXX = g++
 CXXFLAGS = -O3
 LINK = ${CXX}
 LDFLAGS =  
 EXE = MC_DartSampler.host
-KOKKOS_ARCH = "BDW"
+KOKKOS_ARCH = "SKX"
 endif
 
 DEPFLAGS = -M

@@ -16,7 +16,7 @@ KOKKOS_CUDA_OPTIONS = "enable_lambda,rdc"
 else
 CXX = g++
 EXE = ${EXE_NAME}.host
-KOKKOS_ARCH = "BDW"
+KOKKOS_ARCH = "SKX"
 endif
 
 CXXFLAGS = -O3
