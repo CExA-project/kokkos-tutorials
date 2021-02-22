@@ -5,6 +5,14 @@
 This repository contains tutorials for the Kokkos C++ programming
 model (github.com/kokkos/kokkos). 
 
+## The Kokkos Lectures
+
+We are currently running **The Kokkos Lectures** - an extended version
+of our **Intro-Full** Tutorial, spanning 8 modules. For information on that, 
+Slides and Recordings visit: [The Kokkos Lectures Wiki](https://github.com/kokkos/kokkos-tutorials/wiki/Kokkos-Lecture-Series)
+
+## Other Tutorial Compilations
+
 Tutorials in the **Intro-Short** directory cover
  * simple data parallel patterns and policies
  * multidimensional array views
@@ -27,6 +35,17 @@ The raw Makefiles require Makefile variables to be properly configured.
 In most examples, this is `KOKKOS_PATH` pointing to the Kokkos source directory
 and `KOKKOS_DEVICES` which contains the list of device backends to build.
 This will build a new Kokkos library for each exercise.
+
+If you are on a system compatible to our AWS instances, you can type 
+```
+make
+make test
+```
+in the `Exercises` directory.
+
+Compatible means:
+ * X86 with a NVIDIA V100 GPU
+ * kokkos was cloned to ${HOME}/Kokkos/kokkos
 
 ## CMake + Spack
 
