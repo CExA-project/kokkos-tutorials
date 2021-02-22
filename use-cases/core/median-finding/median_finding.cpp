@@ -63,7 +63,7 @@ struct Result {
 // in this simple model N points is restricted to
 // be a power of 2 and we test N teams in powers
 // of 2 as well so it's always an even factor.
-#define KOKKOS_N_POINTS_POW_OF_2 23
+#define KOKKOS_N_POINTS_POW_OF_2 25
 
 // main will call this simple_model test for varies n_teams
 Result simple_model(int n_teams) {
