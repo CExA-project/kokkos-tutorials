@@ -10,8 +10,13 @@ KOKKOS_ARCH = BDW,Volta70
 default: build
 	echo "Start Build"
 
+ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
+CXX = $(KOKKOS_PATH)/bin/nvcc_wrapper -ccbin mpicxx
+EXE = mpi_heat_conduction.cuda
+else
 CXX = mpicxx
-EXE = mpi_heat_conduction.exe
+EXE = mpi_heat_conduction.host
+endif
 
 ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
 CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
