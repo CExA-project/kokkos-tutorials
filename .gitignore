@@ -5,3 +5,4 @@ spack-build-out.txt
 cmake_install.cmake
 CMakeFiles/
 LibInstalls/
+build/
