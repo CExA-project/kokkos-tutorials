@@ -44,7 +44,7 @@ add_subdirectory(Exercises/random_number)
 add_subdirectory(Exercises/tools_minimd)
 add_subdirectory(Exercises/unique_token)
 add_subdirectory(Exercises/unordered_map)
-add_subdirectory(Exercises/virtualfunction)
+# add_subdirectory(Exercises/virtualfunction)
 
 # Not done yet
 # TODO, require Kokkos Kernels
