@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stddef.h>
 #include <Kokkos_Core.hpp>
 
